@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira+Sans:ital", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark-color: #1b2730;
+    --low-dark-color: #344b5c;
+    --background-dark-70: #444444;
+    --color-white-60: #aaaaaa;
+    --background-orange: #ff714a;
+    --color-white-100: #ffffff;
+    --transition-default: 0.25s ease;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 20px;
+}
+
+.section-main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(Landing-page.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-main h1 {
+    color: rgb(4, 182, 152);
+    -webkit-text-stroke: 0.3vw #ff0000;
+    font-size: 10vw;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 40px;
+    line-height: 80px;
+}
+
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    transition: 1s;
+}
+
+header.sticky {
+    background: rgb(6, 123, 177);
+    transition: 0.9s;
+    padding: 20px 50px;
+}
+
+header .brand {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+header .brand:hover {
+    color: #000;
+    background: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+header .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: 0.5s;
+    transition-property: color, background;
+    transition: 0.3s;
+}
+
+header .menu a:hover {
+    color: #000;
+    background: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+header .btn {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.section-two {
+    width: 100%;
+    display: flex;
+    background-color: var(--low-dark-color);
+}
+
+.section-two-logo {
+    width: 30%;
+    align-self: center;
+}
+
+.slika {
+    display: block;
+    width: 20rem;
+    height: auto;
+    margin: 0 auto;
+    animation: aa 5s infinite linear;
+}
+
+.section-two-text {
+    width: 70%;
+    text-align: center;
+    align-self: center;
+    font-size: 17px;
+    padding: 10rem 3rem 10rem 3rem;
+}
+
+.section-two-text p {
+    background-color: var(--dark-color);
+    line-height: 1.5;
+    padding: 2rem;
+    color: #ddd;
+    border-radius: 1rem;
+
+}
+
+@keyframes aa {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.section-three {
+    background-color: #ddd;
+    padding: 5rem 0 5rem 0;
+    color: var(--dark-color);
+    font-size: 20px;
+    line-height: 5rem;
+}
+
+.section-three table {
+    margin: 0 auto;
+    border-top: 3px solid;
+    border-right: 3px solid;
+    border-left: 3px solid;
+    width: 721px;
+    text-align: center;
+    border-spacing: 0;
+}
+
+.section-three td {
+    border-bottom: 3px solid;
+}
+
+.section-four {
+    background-color: #b8b7b9;
+    padding: 5rem 0 5rem 0;
+}
+
+.section-four img {
+    display: block;
+    margin: 0 auto;
+    max-width: 45rem;
+    height: auto;
+}
+
+.section-five-footer {
+    background-color: var(--low-dark-color);
+    padding-top: 2rem;
+}
+
+.flex-footer {
+    color: #0e151a;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.flex-footer h1 {
+    margin-bottom: 2rem;
+}
+
+.credits a {
+    line-height: 2rem;
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+    color: #f1f1f1;
+    -webkit-text-stroke: 0.15vw var(--dark-color);
+    transition: var(--transition-default);
+    border-radius: 5px;
+}
+
+.credits a:hover {
+    background-color: #ddd;
+    padding: 0.3rem;
+    color: var(--dark-color);
+    -webkit-text-stroke: transparent;
+}
+
+.follow-us a,
+.real-madrid-app a {
+    list-style: none;
+    text-decoration: none;
+    margin: 0 0.2rem;
+    font-size: 22px;
+    color: var(--color-white-60);
+    transition: all var(--transition-default);
+}
+
+.footer-made-by {
+    width: 100%;
+}
+
+.footer-line {
+    width: 100%;
+    height: 2px;
+    margin-top: 1rem;
+    background-color: #ddd;
+}
+
+.footer-made-by h1 {
+    text-align: center;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 20px;
+}
+
+.footer-made-by a {
+    text-decoration: none;
+    list-style: none;
+    color: #ddd;
+}
+
+@media (max-width: 1530px) {
+    .section-two {
+        padding-top: 10rem;
+        flex-direction: column;
+        padding-bottom: 5rem;
+    }
+
+    .section-two-logo {
+        width: 100%;
+    }
+
+    .section-two-text {
+        padding: 1rem;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .section-two-text p {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 1240px) {
+    header .btn {
+        display: block;
+    }
+
+    header .menu {
+        position: fixed;
+        background: rgb(6, 123, 177);
+        flex-direction: column;
+        min-width: 280px;
+        height: 100vh;
+        top: 0;
+        right: -200%;
+        padding: 80px 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+
+    header .menu.active {
+        right: 0;
+    }
+
+    header .menu .close-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+    }
+
+    header .menu a {
+        display: block;
+        font-size: 25px;
+
+        margin: 20px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 924px) {
+    .section-four img {
+        width: 75%;
+    }
+}
+
+@media (max-width: 750px) {
+    .section-main h1 {
+        text-align: center;
+        font-size: 10vw;
+        letter-spacing: 10px;
+    }
+
+    .section-two {
+        padding-top: 7.5rem;
+    }
+
+    .section-two-text {
+        padding: 1.5rem;
+        font-size: 15.5px;
+    }
+
+    .section-two-text p {
+        line-height: 1.45;
+        padding: 1.5rem;
+    }
+
+    .slika {
+        width: 15rem;
+    }
+
+    .section-three {
+        font-size: 15px;
+    }
+
+    .section-three table {
+        width: 450px;
+    }
+
+    .flex-footer {
+        flex-direction: column;
+    }
+
+    .flex-footer h1 {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    header .menu {
+        position: fixed;
+        background: rgb(6, 123, 177, 0.65);
+    }
+
+    .header .brand {
+        font-size: 10px;
+    }
+
+    header .brand:hover {
+        color: #fff;
+        background: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    header .menu a {
+        background-color: #ddd;
+        text-align: center;
+    }
+
+    .section-two {
+        padding-top: 5rem;
+    }
+
+    .section-two-text {
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    .section-two-text p {
+        line-height: 1.4;
+        padding: 1rem;
+    }
+
+    .slika {
+        width: 10rem;
+    }
+
+    .section-three {
+        font-size: 4vw;
+        line-height: 4rem;
+    }
+
+    .section-three table {
+        width: 90%;
+    }
+}
